@@ -10,7 +10,7 @@ from sklearn.decomposition import PCA
 
 st.set_page_config(page_title='Customer Segmentation | InsightLab', page_icon='📊', layout='wide')
 ROOT=Path(__file__).resolve().parent
-DATA=ROOT/'data'/'customer_data.csv'
+DATA=Path(__file__).resolve().parent / "customer_data.csv"
 FEATURES=['age','annual_income_inr','purchase_frequency_12m','average_order_value_inr','total_spend_12m_inr','days_since_last_purchase','return_rate']
 COLORS={'High-Value Loyal':'#2563eb','Regular Customers':'#0d9488','Deal Seekers':'#d97706','At-Risk Customers':'#dc2626'}
 @st.cache_data
